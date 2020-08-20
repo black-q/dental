@@ -11,7 +11,7 @@
 
 .gallery {
     margin: 0 auto;
-    padding: 5px;
+    padding: 0px;
     background: #fff;
 }
 
@@ -133,9 +133,8 @@ span.psw {
 }
 
 .page_width {
-    padding-left: 15%;
-    padding-right: 15%;
-
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 /* Modal Content/Box */
@@ -178,12 +177,21 @@ span.psw {
   to {transform: scale(1)}
 }
 
+#znanyLekarz-panel-mobile {
+    display: none
+}
+
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
+@media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  [class*="page_"] {
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  .cancelbtn {
-    width: 100%;
+  #znanyLekarz-panel-desktop {
+    display: none;
   }
+  #znanyLekarz-panel-mobile {
+    display: block;
+  }
+}
