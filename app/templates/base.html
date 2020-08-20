@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="#home" class="w3-bar-item w3-button"><b>lek. stom.</b> Anna Suchodolska</a>
+
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">O mnie</a>
+                <a href="#contact" class="w3-bar-item w3-button">Kontakt</a>
+            </div>
+        </div>
+    </div>
+    <header class="w3-display-container w3-content w3-wide" style="max-width:40%;  padding-top: 30px;" id="home">
+        <img id="contentimg" class="w3-image" src="{{url_for('static', filename='img/asc.png')}}" alt="Architecture" width="1500" height="800">
+    </header>
+    <div class="page_width">
+        <div id="content">{% block content %}{% endblock %}</div>
+    </div>
+
+    <footer class="w3-center w3-black w3-padding-16">
+        <p>Copyright © 2020.  All rights reserved.</p>
+    </footer>
+</body>
+</html>
